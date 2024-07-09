@@ -817,6 +817,7 @@ fn prepare_search<'t>(
 
     search.offset(offset);
     search.limit(limit);
+    search.words_limit(100);
 
     if let Some(ref filter) = query.filter {
         if let Some(facets) = parse_filter(filter)? {
